@@ -67,7 +67,7 @@ public class Kaup
 	
 	@Override
 	public String toString() {
-		return "카우푸지수 [이름=" + name + ",+ 결과 ="+ result + "]";
+		return "카우푸지수 [이름=" + name + ", 결과 ="+ result + "]";
 	}
 
 	public double getHeight() {
