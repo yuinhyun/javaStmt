@@ -12,7 +12,7 @@ public class OddSum {
 			
 		int sum=0, i=0;
 		System.out.println("1번째방법");
-		for (i = 0; i <10; i+=2) {
+		for (i = 0; i <=10; i+=2) {
 			
 			sum += i;
 			
@@ -22,8 +22,9 @@ public class OddSum {
 		for (i = 0; i <10; i++) {
 			
 			if(i % 2 ==1)
+			{
 			sum += i;
-			
+			}
 		}
 		System.out.println(sum);
 		
