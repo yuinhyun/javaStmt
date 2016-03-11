@@ -14,14 +14,15 @@ public class AccountBean {
 	 * 계좌번호는 랜덤숫자로 만들어지며(총 6자리로 합시다)
 	 * 계좌 주인의 이름은 새겨지며 비번도 설정합니다
 	 * 다만, 잔액은 통장이 만들어진 이후에 입금이 되겠지요.
+	 * @param name 
 	 * */
 
 	public AccountBean(String name, int password) {
 		// 생성자
-		this.accountNo = (int) (Math.random() * 100000) + 1;
+		this.accountNo = (int) (Math.random() * 1000000) + 1;
 		this.name = name;
 		this.password = password;
-		this.money=0;
+		this.money= 0;
 	}
 	public int getAccountNo() {
 		return accountNo;
