@@ -27,7 +27,7 @@ public class Tax {
 		name = scanner.next();
 		yearmoney =scanner.nextInt();
 		
-		alltax += yearmoney * tax;
+		alltax += (yearmoney * tax)/12;
 		
 		
 		System.out.println("연봉"+yearmoney+"만원을 받으시는 "+name+"님께서 이번달 납부할 세금은 "+ alltax+"만원입니다.");
