@@ -18,34 +18,16 @@ public class BigNumberMain {
 		System.out.println("3개의 숫자를 입력하세요");
 		
 		BigNumber big = new BigNumber();
-		//big.getBigNum(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
+		big.setA(scanner.nextInt());
+		big.setB(scanner.nextInt());
+		big.setC(scanner.nextInt());
+		big.setBig();
+		
+		
 
-		System.out.println("가장 큰수는 " + big.getBigNum(scanner.nextInt(), scanner.nextInt(), scanner.nextInt()) + " 입니다."); 
+		System.out.println(big.toString()); 
 
 	} 
 
 }
-//Big b = new Big
-//{} :메모리 영역, BigNumber:
-class BigNumber{
-	//public BigNumber() {} 생략되있다.
-	public int getBigNum(int a, int b, int c){ 
-		int big = 0; 
 
-		if (a > b || a > c) { 
-
-			big = a; 
-
-		} else if (b > c) { 
-
-			big = b; 
-
-		} else { 
-
-			big = c; 
-
-		} 
-		return big;
-		
-	}
-}

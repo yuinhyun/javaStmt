@@ -31,8 +31,8 @@ public class NumGolfBean {
 	public boolean isFlag() {
 		return flag;
 	}
-	public void setFlag(boolean flag) {
-		this.flag = flag;
+	public void setFlag() {
+		this.flag = (getCom()==getPlayer())?true:false;
 	}
 	public String getResult(){
 		return "";

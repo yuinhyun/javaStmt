@@ -17,6 +17,7 @@ public class NumGolfMain {
 		System.out.println("컴퓨터 랜덤 수 발생");
 		bean.setCom();
 		bean.setCount();
+		String msg="";
 		while(true)
 		{
 		System.out.println("[메뉴]1.숫자 맞추기 2.종료");
@@ -27,10 +28,14 @@ public class NumGolfMain {
 		case 1:
 			System.out.println("1부터10까지 숫자중 하나 입력해주세요");
 			bean.setPlayer(scanner.nextInt());
-			//bean.setCount();
-			//String msg="";
-			//msg =(bean.getCom()==bean.getPlayer())?bean.toString():"랜덤숫자와 불일치";
-			if(bean.getCom()==bean.getPlayer())
+			bean.setCount();
+
+			bean.setFlag();
+			System.out.println();
+			System.out.println(bean.toString());
+			break;
+			
+			/*if(bean.getCom()==bean.getPlayer())
 			{
 				bean.setFlag(true);
 				System.out.println("일치");
@@ -40,9 +45,7 @@ public class NumGolfMain {
 			else
 			{	bean.setCount();
 				System.out.println("불일치");
-				
-			}
-			break;
+			}*/
 		case 2: System.out.println("종료합니다."); return;
 		default: System.out.println("잘못된값");
 			break;

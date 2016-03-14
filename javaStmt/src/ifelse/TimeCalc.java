@@ -1,20 +1,46 @@
 package ifelse;
 
-import java.util.Scanner;
-
-/**
- *@file : TimeCalc.java 
- *@author inhyeon
- *@date 2016. 3. 11.
- *@story 초를 입력하면 시간, 분, 초를 출력하는 프로그램
- *10000초를 입력하면 7시간 47분 13초 로 출력
- */
 public class TimeCalc {
-	public static void main(String[] args) {
-		System.out.println("초를 입력해주세요");
-		Scanner scanner = new Scanner(System.in);
-		int wiki = scanner.nextInt();
-		int hour=0, minute =0, wikipedia=0;
+	int wiki, hour, minute, wikipedia;
+	String result;
+
+	public int getWiki() {
+		return wiki;
+	}
+
+	public void setWiki(int wiki) {
+		this.wiki = wiki;
+	}
+
+	public int getHour() {
+		return hour;
+	}
+
+	public void setHour() {
+		this.hour = hour;
+	}
+
+	public int getMinute() {
+		return minute;
+	}
+
+	public void setMinute() {
+		this.minute = minute;
+	}
+
+	public int getWikipedia() {
+		return wikipedia;
+	}
+
+	public void setWikipedia() {
+		this.wikipedia = wikipedia;
+	}
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult() {
 		if (wiki>=3600) {
 			hour = wiki/3600;
 			minute= (wiki-(hour*3600))/60;
@@ -29,6 +55,13 @@ public class TimeCalc {
 		{
 			wikipedia= wiki;
 		}
-		System.out.println(hour+"시"+ minute +"분"+ wikipedia +"초");
+		this.result = hour+"시"+ minute +"분"+ wikipedia +"초";
 	}
+
+	@Override
+	public String toString() {
+		return "시간은 [" + result + "]";
+	}
+	
+
 }

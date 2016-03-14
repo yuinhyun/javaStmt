@@ -1,36 +1,62 @@
 package forloop;
 
-import java.util.Scanner;
-
-/**
- *@file : Inputdan.java 
- *@author inhyeon
- *@date 2016. 3. 11.
- *@story 입력받은 정수의 구구단 구하기
- *예를 들면 2를 입력하면 2단 출력
- *109를 입력하면 109*2 ~ 109*9
- *다만 0과 음수를 입력하면 1이상 정수값만 입력하시오 라고 출력
- */
 public class InputGugudan {
-	public static void main(String[] args) 
-	{
-		System.out.println("예를 들면 2를 입력하면 2단 출력"+"109를 입력하면 109*2 ~ 109*9"+"다만 0과 음수를 입력하면 1이상 정수값만 입력하시오 라고 출력");
-		System.out.println("단을 입력해주세요");
-		Scanner scanner = new Scanner(System.in);
-		int dan = scanner.nextInt();
+	private int dan;
+	private String err;
+	private String result;
+
+	public int getDan() {
+		return dan;
+	}
+
+	public void setDan(int dan) {
+		
 		if(dan<=0)
 		{
-			System.out.println("다시 입력해주세요");
-			return;// 이 메소드를 종료시켜라
+			this.dan=dan;
+			this.err = "1이상의정수입력";
+			this.result ="없음";
+			
+			return;
 		}
 		for (int i = dan ; i <= dan; i++) 
 		{
 				for (int j = 1; j < 10; j++)
 				{
-					System.out.println(dan +" * "+ j+ " = "+ dan*j);
-					
+					this.dan=dan;
+					this.err = "없음";
+					this.result = (dan +" * "+ j+ " = "+ dan*j);
+					System.out.println(result);
 				}
 				
 		}
+		
+		this.dan = dan;
 	}
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult() {
+		
+		
+		this.result=result;
+	}
+
+	public String getErr() {
+		return err;
+	}
+
+	public void setErr() {	
+		this.err = err;
+	}
+
+	@Override
+	public String toString() {
+		return "구구단 [몇단="+ dan + "단"+", 오류=" + err + "]";
+		
+	}
+	
+	
+
 }

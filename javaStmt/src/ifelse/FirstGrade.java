@@ -1,44 +1,86 @@
 package ifelse;
 
-import java.util.Scanner;
-
-/**
- *@file : FirstGrade.java 
- *@author inhyeon
- *@date 2016. 3. 11.
- *@story 3명의 학생 점수를 받아서 1등을 출력하는 프로그램
- */
 public class FirstGrade {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("3명의 이름과 점수를 입력하세요");
+	private String aName, bName,cName, Name;
+	private int aScore, bScore, cScore, Score;
 	
-		String aName = scanner.next();
-		int aScore=scanner.nextInt();
-		
-		String bName = scanner.next();
-		int bScore=scanner.nextInt();
-		
-		String cName = scanner.next();
-		int cScore=scanner.nextInt();
-		
-		String name = "";
-		int score = 0;
-		if(aScore>bScore|| aScore>cScore){
-			name = aName;
-			score= aScore;
-			
-		}else if(bScore>cScore)
-		{
-			name = bName;
-			score = bScore;
-		}
-		else
-		{
-			name = cName;
-			score = cScore;
-		}
-		System.out.println("1등은 "+name +", "+score+"점입니다.");
+	public String getaName() {
+		return aName;
 	}
+	public void setaName(String aName) {
+		this.aName = aName;
+	}
+	public String getbName() {
+		return bName;
+	}
+	public void setbName(String bName) {
+		this.bName = bName;
+	}
+	public String getcName() {
+		return cName;
+	}
+	public void setcName(String cName) {
+		this.cName = cName;
+	}
+	public int getaScore() {
+		return aScore;
+	}
+	public void setaScore(int aScore) {
+		this.aScore = aScore;
+	}
+	public int getbScore() {
+		return bScore;
+	}
+	public void setbScore(int bScore) {
+		this.bScore = bScore;
+	}
+	public int getcScore() {
+		return cScore;
+	}
+	public void setcScore(int cScore) {
+		this.cScore = cScore;
+	}
+	public String getName() {
+		return Name;
+	}
+	public void setName() {
+		  int temp =aScore;
+		  if(temp==aScore)
+		  {
+			 this.Name=aName;
+		  }
+		   
+	      if (bScore > temp) {
+	         this.Name=bName;
+	      } 
+	      if(cScore > temp){
+	         this.Name=cName;
+	      }
+	}
+	public int getScore() {
+		
+		
+		return Score;
+	}
+	public void setScore() {
+		
+		  int temp =aScore;
+		   
+	      if (bScore > temp) {
+	         temp = bScore;
+	      } 
+	      if(cScore > temp){
+	         temp = cScore;
+	      }
+	      this.Score = temp;
+		
+		
+	}
+	@Override
+	public String toString() {
+		return "1등은? [이름=" + Name + ", 성적=" + Score + "]";
+	}
+	
+	
 
 }
