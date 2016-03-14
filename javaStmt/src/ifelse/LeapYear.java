@@ -21,14 +21,15 @@ public class LeapYear {
 		System.out.println("판별하려는 년도를 입력");
 		int year = scanner.nextInt();
 		String yearStr = "";
-		if(year %100==0)//100으로 나눠 떨어진다.
+		if(year %4==0 && year%100 !=0 || year%400==0)//4로 나눠 떨어진다.
 		{
 			yearStr = "윤년";
 			
-		}else{
-			yearStr = "평년";
-			
 		}
-		System.out.println();
+		else
+		{
+			yearStr = "평년";
+		}
+		System.out.println(yearStr+"입니다.");
 	}
 }

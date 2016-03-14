@@ -22,13 +22,23 @@ public class FirstGrade {
 		String cName = scanner.next();
 		int cScore=scanner.nextInt();
 		
-		if(true){
+		String name = "";
+		int score = 0;
+		if(aScore>bScore|| aScore>cScore){
+			name = aName;
+			score= aScore;
 			
-		}else
+		}else if(bScore>cScore)
 		{
-			
+			name = bName;
+			score = bScore;
 		}
-		System.out.println("1등은 홍길동, 90점입니다.");
+		else
+		{
+			name = cName;
+			score = cScore;
+		}
+		System.out.println("1등은 "+name +", "+score+"점입니다.");
 	}
 
 }
