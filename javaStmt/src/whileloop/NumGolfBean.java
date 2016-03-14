@@ -34,6 +34,9 @@ public class NumGolfBean {
 	public void setFlag(boolean flag) {
 		this.flag = flag;
 	}
+	public String getResult(){
+		return "";
+	}
 	@Override
 	public String toString() {
 		return "결과 [플레이어=" + player + ", 컴퓨터값=" + com + ", 시도한 횟수=" + count + ", 일치여부=" + flag + "]";
