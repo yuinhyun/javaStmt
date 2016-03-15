@@ -1,4 +1,7 @@
 package grade;
+
+import java.util.Vector;
+
 /**
  * CRUD
  * C : Create 생성
@@ -11,7 +14,7 @@ public interface GradeService {
 	// C 성적표 출력
 	public void input(GradeBean grade);//추상 메소드
 	// R성적표 리스트 출력
-	public void getList();
+	public Vector<GradeBean> getList();
 	//성적표 조회(학번)
 	public void getGradeByHak();
 	// R 성적표 조회(이름)

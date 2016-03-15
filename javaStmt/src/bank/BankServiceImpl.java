@@ -3,10 +3,12 @@ package bank;
 public class BankServiceImpl implements BankService {
 
 	private AccountBean account;
+	
 
 	@Override
 	public String openAccount(String name, int password) {
 		// 계좌 개설
+		
 		account = new AccountBean(name, password);
 		return account.toString();
 	}

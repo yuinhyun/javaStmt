@@ -22,7 +22,8 @@ public class GradeController {
 			service.delete();
 			break;
 		case 4:
-			service.getList();
+			
+			System.out.println(service.getList());
 			break;
 		case 5:
 			service.getCountByName();

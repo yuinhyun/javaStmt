@@ -8,7 +8,7 @@ public class BankMain {
 		//지역변수 영역
 		Scanner scanner = new Scanner(System.in);
 		BankServiceImpl service = new BankServiceImpl();
-		AdminBankServiceImpl admin = new AdminBankServiceImpl(100);
+		AdminBankServiceImpl2 admin = new AdminBankServiceImpl2(100);
 		
 		
 		//연산

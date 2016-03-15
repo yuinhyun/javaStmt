@@ -1,5 +1,7 @@
 package bank;
 
+import java.util.Vector;
+
 /**
  *@file : BankServiceImpl.java 
  *@author inhyeon
@@ -8,55 +10,44 @@ package bank;
  */
 public class AdminBankServiceImpl implements AdminBankService{
 
-	private AccountBean[] accountList;//전체 계좌를 보관하는 객체
-	private int count; //전체 통장 계좌 수
+	Vector<AccountBean> getList;
 	
-	public AdminBankServiceImpl(int size) {
-		// accountList 를 초기화 해줌
-		accountList = new AccountBean[size];
+	public AdminBankServiceImpl() {
+		
+		Vector<AccountBean> getList = new Vector<AccountBean>();
 	}
 	
+	
 	@Override
-	public String openAccount(String name, int password) {
-		//계좌번호로 계좌 조회(반드시 하나만 검색됨)
-		AccountBean bean = new AccountBean(name, password);
-		count++;
-		return bean.toString();
+	public String openAccount(AccountBean bank) {
+		
+		
+		getList.add(bank);
+		return null;
 	}
 
 	@Override
-	public AccountBean findAccountByAccountNo(int accountNo) {
-		// 이름으로 계좌 조회(복수개의 결과가능)
+	public Vector<AccountBean> findAccountByAccountNo(int accountNo) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public AccountBean[] findAccountsByName(String name) {
-		// 계좌 해지
-		AccountBean[] tempList = new AccountBean[countByName(name)];
-		
-		
-		return tempList;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public String closeAccount(int accountNo) {
-		// 계좌 해지
-		// 유효성 체크
-		for (int i=0; i<count; i++)
-		{
-			if(true)
-			{
-				accountList[i]=null;
-			}
-		}
+		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public int countAll() {
-		// 전체 계좌수 조회
-		return count;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
@@ -64,6 +55,26 @@ public class AdminBankServiceImpl implements AdminBankService{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	@Override
+	public Vector<AccountBean> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public void openAccount(String next, int nextInt) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	
+
+
+	
+
+	
 
 	
 }
