@@ -3,70 +3,93 @@ package grade;
 import java.util.Vector;
 
 public class GradeServiceImpl implements GradeService {
-	//멤버필드
-	Vector<GradeBean> gradeList;
-	
+	/*
+	 * private String name; private int hak, java, sql, jsp, spring;
+	 */
+
+	// 멤버 필드
+	// 속성을 모아놓은곳 (Bean)
+	private Vector<GradeBean> gradeList;
+
+	// Vector<GradeBean> gradeList = new Vector<GradeBean>(); //인스턴스변수
 	public GradeServiceImpl() {
-		
-		Vector<GradeBean> gradeList = new Vector<GradeBean>(); //초기화
+		gradeList = new Vector<GradeBean>(); // 인스턴스 변수 초기화
 	}
-	//멤버 메소드 에어리어
+	// 메서드 내부에 위치하면 참조변수(공유를 안하므로)
+	// 멤버 메소드 에어리어
+	// 기능을 모아놓은곳(Service)
+
 	@Override
-	public void input(GradeBean grade) {
-		// 성적표 출력
-		//int a=0;//지역변수를 초기화
-		gradeList.add(grade);
-		}
+	public void input(GradeBean gradeBean) {
+		// 성적표 등록 C
+		gradeList.add(new GradeBean(2,"김유신",100,100,100,100));
+		gradeList.add(new GradeBean(3,"완유신",90,90,90,90));
+		gradeList.add(new GradeBean(4,"강유신",80,80,80,80));
+		gradeList.add(new GradeBean(5,"맘유신",700,70,70,70));
+		gradeList.add(new GradeBean(6,"후유신",60,60,60,60));
+		gradeList.add(new GradeBean(7,"이유신",50,50,50,50));
+		gradeList.add(gradeBean);
+	}
 
 	@Override
 	public Vector<GradeBean> getList() {
-		//Vector<GradeBean> tempList = new Vector<GradeBean>();
-		//return tempList;
+		// 성적표 리스트 출력 R
+		
 		return gradeList;
-		// R성적표 리스트 출력
-		
-		
+
 	}
 
 	@Override
-	public void getGradeByHak() {
-		//성적표 조회(학번)
+	public GradeBean getGradeByHak(int hak) {
+		// 성적표 조회(학번) R
+		GradeBean tempGrade = new GradeBean();
+		for (int i = 0; i < gradeList.size(); i++) {
+			//System.out.println(gradeList.get(i).getHak());
+			
+			if(gradeList.get(i).getHak() == hak)
+			{
+				tempGrade=gradeList.get(i);
+				
+				break;
+			}
+		}
 		
+		return tempGrade;
+
+	}
+
+	@Override
+	public void getGradesByName() {
+		// 성적표 조회(이름) R
+
 	}
 
 	@Override
 	public void update() {
-		// U 성적표 수정
+		// 성적표 수정 U
+
 	}
 
 	@Override
-	public void delete() {
-		// D 성적표 삭제
+	public String delete(int hak) {
 		
+		return (gradeList.remove(this.getGradeByHak(hak))) ? "삭제성공" : "삭제실패";
+		// 성적표 삭제 D
+
 	}
 
 	@Override
-	public void getCount() {
+	public int getCount() {
 		// R 카운트 조회
 		
+		return gradeList.size();
+
 	}
 
 	@Override
 	public void getCountByName() {
 		// R 이름조회시 카운트 조회
-		
-	}
 
-	@Override
-	public void getGradeByName() {
-		// R 성적표 조회(이름)
-		
-	}
-
-	@Override
-	public void getGradeByname() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

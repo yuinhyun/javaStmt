@@ -6,7 +6,7 @@ public interface AdminBankService {
 	/**
 	 * 계좌 개설
 	 */
-	public String openAccount(AccountBean bank);
+	public String openAccount(String name, int password);
 	/**
 	 * 계좌번호로 계좌 조회(반드시 하나만 검색됨)
 	 * */

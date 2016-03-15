@@ -19,10 +19,11 @@ public class AdminBankServiceImpl implements AdminBankService{
 	
 	
 	@Override
-	public String openAccount(AccountBean bank) {
+	public String openAccount(String name, int password) {
 		
 		
-		getList.add(bank);
+		getList.add(name, password);
+		
 		return null;
 	}
 
@@ -59,14 +60,9 @@ public class AdminBankServiceImpl implements AdminBankService{
 	@Override
 	public Vector<AccountBean> getList() {
 		// TODO Auto-generated method stub
-		return null;
+		return getList;
 	}
 
-
-	public void openAccount(String next, int nextInt) {
-		// TODO Auto-generated method stub
-		
-	}
 
 
 	
