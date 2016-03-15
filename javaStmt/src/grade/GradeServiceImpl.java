@@ -3,50 +3,49 @@ package grade;
 public class GradeServiceImpl implements GradeService {
 
 	@Override
-	public void input() {
-		// TODO Auto-generated method stub
+	public void input(GradeBean grade) {
+		// C 성적표 출력
 		
 	}
 
 	@Override
 	public void getList() {
-		// TODO Auto-generated method stub
+		// R성적표 리스트 출력
 		
 	}
 
 	@Override
 	public void getGradeByHak() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void getGradeByName() {
-		// TODO Auto-generated method stub
+		//성적표 조회(학번)
 		
 	}
 
 	@Override
 	public void update() {
-		// TODO Auto-generated method stub
-		
+		// U 성적표 수정
 	}
 
 	@Override
 	public void delete() {
-		// TODO Auto-generated method stub
+		// D 성적표 삭제
 		
 	}
 
 	@Override
 	public void getCount() {
-		// TODO Auto-generated method stub
+		// R 카운트 조회
 		
 	}
 
 	@Override
 	public void getCountByName() {
-		// TODO Auto-generated method stub
+		// R 이름조회시 카운트 조회
+		
+	}
+
+	@Override
+	public void getGradeByName() {
+		// R 성적표 조회(이름)
 		
 	}
 

@@ -9,7 +9,7 @@ package grade;
  * */
 public interface GradeService {
 	// C 성적표 출력
-	public void input();//추상 메소드
+	public void input(GradeBean grade);//추상 메소드
 	// R성적표 리스트 출력
 	public void getList();
 	//성적표 조회(학번)
