@@ -1,6 +1,7 @@
 package grade;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class GradeController {
 	public static void main(String[] args) {
@@ -17,17 +18,23 @@ public class GradeController {
 				Service.input(new GradeBean(scanner.nextInt(), scanner.next(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));		
 				break;
 			case 2:
-				Service.update();
+				System.out.println("수정하려는 성적표의 학번, JAVA, SQL,JSP,Spring,스프링점수를 입력하시오");
+				int hak = scanner.nextInt();
+				String name = Service.getGradeByHak(hak).getName();
+				System.out.println(Service.update(new GradeBean(hak,name,scanner.nextInt(),scanner.nextInt(),scanner.nextInt(),scanner.nextInt())));
+				
 				break;
 			case 3:
-				System.out.println("삭제하려는 학법을 입력하세요");
+				System.out.println("삭제하려는 학번을 입력하세요");
 				System.out.println(Service.getGradeByHak(scanner.nextInt()));
 				break;
 			case 4:
 				System.out.println(Service.getList());
 				break;
 			case 5:
-				Service.getGradesByName();
+				System.out.println("조회하려는 이름을 입력하시오");
+				ArrayList<GradeBean> tempList = Service.getGradesByName(scanner.next());
+				System.out.println((tempList.size()==0) ? "조회하려는 이름이 없습니다.":tempList);
 				break;
 			case 6:
 				System.out.println("조회 하려는 학번을 입력하세요");
