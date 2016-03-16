@@ -1,11 +1,7 @@
 package phone;
 
-/**
- *@file : Phone.java 
- *@author inhyeon
- *@date 2016. 3. 16.
- *@story 폰의 확장을 통해 상속의 개념을 이해해보자
- */
+
+// Phone은 상속을 시킬 클래스
 public class Phone {
 	private String company, call;
 
@@ -24,6 +20,7 @@ public class Phone {
 	public void setCall(String call) {
 		this.call = call + "에게 전화를 검";
 	}
+
 	
 
 }

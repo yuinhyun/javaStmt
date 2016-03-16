@@ -30,8 +30,12 @@ public class MemberController {
 				System.out.println((temp==null)?"내정보보기에 실패":"나의정보는"+"\n"+temp);
 				break;
 			case 4: 
+				System.out.println("아이디, 비번 입력");
+				temp = service.login(s.next(), s.next());
+				System.out.println((temp==null)?"내정보보기에 실패":"나의정보는"+"\n"+temp);
 				System.out.println("비번,이름,생년월일,주소 입력");
 				temp = service.update(new MemberBean(temp.getId(),s.next(),s.next(),s.nextInt(),s.next()));
+				System.out.println((temp==null)?"실패":"수정되었습니다."+"\n"+temp);
 				
 				break;
 			
