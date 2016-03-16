@@ -22,7 +22,7 @@ public class AdminBankServiceImpl implements AdminBankService{
 	public String openAccount(String name, int password) {
 		
 		
-		getList.add(name, password);
+		
 		
 		return null;
 	}
