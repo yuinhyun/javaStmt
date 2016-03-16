@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MemberController {
 	public static void main(String[] args) {
+		//MemberService service = new MemberService();
 		MemberServiceImpl service = new MemberServiceImpl();
 		Scanner s = new Scanner(System.in);
 		MemberBean temp = null;
