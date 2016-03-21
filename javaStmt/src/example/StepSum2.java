@@ -17,7 +17,7 @@ public class StepSum2 {
 			}
 			
 		}
-		//System.out.println(sum);
+		System.out.println(sum);
 	}
 
 }
