@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class DividingSearch {
 	public static void main(String[] args) {
 		
-		int Data[] = new int[5];
+		int Data[] = new int[10];
 		int i =0;
 		
 		Scanner scanner = new Scanner(System.in);

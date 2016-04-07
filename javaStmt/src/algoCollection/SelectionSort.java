@@ -34,7 +34,7 @@ public class SelectionSort {
 				
 				for ( j = 0; j < Data.length; j++) 
 				{
-					if (Data[i] >= Data[j]) 
+					if (Data[i] < Data[j]) 
 					{
 						temp = Data[i];
 						Data[i] = Data[j];

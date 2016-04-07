@@ -31,7 +31,7 @@ public class BubleSort {
 		{
 			for ( k = 0; k <Data.length-1; k++)//두번째
 			{
-				if(Data[k] < Data[k+1])//오름차순
+				if(Data[k] > Data[k+1])//오름차순
 				{
 					temp = Data[k];
 					Data[k] = Data[k+1];
